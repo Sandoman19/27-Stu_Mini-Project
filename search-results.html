@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Library of Congress Search</title>
+  <!-- styleSheets -->
+  <link rel="stylesheet" href="./assets/style.css" />
+
+</head>
+
+<body>
+  <!-- header -->
+  <h1>Library of Congress Search Engine</h1>
+  <p>Enter somthing you would like to search and the category it is in.</p>
+  <!-- start of search form -->
+  <form id="searchForm">
+    <!-- field for entering search item  -->
+    <input id="searchInput" type="text" placeholder="what would you like to search">
+      
+    <select id="formatInput" class="formInput">
+      <!-- category list as per https://www.loc.gov/ -->
+      <option value="" disabled selected>Select a format...</option><!-- will look for everything -->
+      <option value="audio">Audio</option>
+      <option value="Books">Books and Painted Material</option>
+      <option value="film-and-videos">Film and Videos</option>
+      <option value="Legislation">Legislation</option>
+      <option value="manuscripts">Manuscripts and Mixed Material</option>
+      <option value="maps">Maps</option>
+      <option value="notated-music">Notated Music</option>      
+      <option value="newspapers">Newspapers</option>
+      <option value="Periodicals">Periodicals</option>
+      <option value="Personal">Personal Narratives</option>
+      <option value="photos">Photos, Prints and Drawings</option>
+      <option value="software">Software and E-Resources</option>
+      <option value="web-archives">Web Archives</option>
+      <option value="web-pages">Web Pages</option>
+      <option value="3D-objects">3D Objects</option>
+
+    </select>
+    <!-- search button -->
+    <button id="searchBtn" class="btn btn-info btn-block">Click Me To Search</button>
+
+  </form>
+  <!-- button to go back to main page -->
+  <a href="./index.html" class="btn btn-block btn-danger">&larr; Go back.</a>
+  <!-- result listed here -->
+  <div>
+    <h2>Showing results for <span id="result-text"></span></h2>
+    <div id="result-content" ></div>
+  </div>
+  <!-- javaScript -->
+  <script src="./assets/script.js"></script>
+
+</body>
+
+</html>
